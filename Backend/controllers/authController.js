@@ -5,7 +5,7 @@ import crypto from "crypto";
 import sendEmail from "../utils/sendEmail.js";
 import bcrypt from "bcryptjs";
 
-export const registerUser = asyncHandler(async (req, res) => {
+export const registeruser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   const userExists = await User.findOne({ email });
   if (userExists) {
