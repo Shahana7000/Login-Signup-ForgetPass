@@ -62,7 +62,7 @@ export default function Login() {
         </form>
         <Link to="/forgot-password">Forgot password?</Link>
         <br/>
-        <Link to="/signup">Don't have account</Link>
+        <Link to="/signup">Don't have account?</Link>
         {err && <p style={{ color: "red" }}>{err}</p>}
       </div>
     </div>
