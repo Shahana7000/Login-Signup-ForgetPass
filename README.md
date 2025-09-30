@@ -22,40 +22,6 @@ Frontend: React.js, Material UI, Axios, React Router
 Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, Nodemailer
 Database: MongoDB Atlas (or Local MongoDB)
 
-# mern-auth/
-│
-├── backend/
-│   ├── server.js
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   └── authController.js
-│   ├── models/
-│   │   └── User.js
-│   ├── routes/
-│   │   └── authRoutes.js
-│   └── utils/
-│       └── sendEmail.js
-│
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Login.jsx
-│   │   │   ├── Signup.jsx
-│   │   │   ├── ForgotPassword.jsx
-│   │   │   ├── ResetPassword.jsx
-│   │   │   └── Dashboard.jsx
-│   │   ├── api/
-│   │   │   └── api.js
-│   │   ├── utils/
-│   │   │   └── auth.js
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── main.jsx
-│   └── package.json
-│
-└── README.md
-
 
 # ⚙️ Installation & Setup
 1️⃣ Clone the Repository
