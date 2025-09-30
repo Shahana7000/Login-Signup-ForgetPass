@@ -25,13 +25,15 @@ export default function Dashboard(){
   };
 
   return (
-    <div>
-      <h2>Dashboard</h2>
+    <div className="main-container">
+      <div className="login-card">
+      <h2 className="heading">Dashboard</h2>
       {user ? <>
-        <p>Welcome, {user.name}</p>
-        <p>{user.email}</p>
+        <p className="heading">Welcome, {user.name}</p>
+        <p className="heading">{user.email}</p>
         <button onClick={logout}>Logout</button>
       </> : <p>Loading...</p>}
+      </div>
     </div>
   );
 }

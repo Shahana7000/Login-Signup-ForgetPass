@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import API from "../api/api";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export default function ForgotPassword(){
   const [email, setEmail] = useState("");
@@ -16,13 +18,21 @@ export default function ForgotPassword(){
   };
 
   return (
-    <div>
-      <h2>Forgot Password</h2>
+    <div className="main-container">
+      <div className="login-card">
+      <h2 className="heading">Forgot Password</h2>
       <form onSubmit={submit}>
-        <input value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
-        <button type="submit">Send reset link</button>
+        <TextField value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required id="outlined-required" className="inputBox"/>
+          <br/><br/>
+
+        <Button type="submit" className="login-btn"
+            variant="contained"
+            color="success">
+        Send reset link</Button>
+        <br/>
       </form>
-      {msg && <p>{msg}</p>}
+      {msg && <p className="heading">{msg}</p>}
+      </div>
     </div>
   );
 }

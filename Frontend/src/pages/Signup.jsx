@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import API from "../api/api";
 import { setToken } from "../utils/auth";
 import { useNavigate } from "react-router-dom";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export default function Signup(){
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -21,15 +23,22 @@ export default function Signup(){
   };
 
   return (
-    <div>
-      <h2>Sign up</h2>
+    <div className="main-container">
+      <div className="login-card">
+      <h2 className="heading">Sign up</h2>
       <form onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" onChange={handleChange} required />
-        <input name="email" placeholder="Email" onChange={handleChange} required />
-        <input name="password" placeholder="Password" type="password" onChange={handleChange} required />
-        <button type="submit">Sign up</button>
+        <TextField name="name" placeholder="Name" onChange={handleChange}  id="outlined-required" required className="inputBox "/>
+        <br/><br/>
+        <TextField name="email" placeholder="Email" onChange={handleChange}  id="outlined-required" required  className="inputBox "/>
+        <br/><br/>
+        <TextField name="password" placeholder="Password" type="password" onChange={handleChange} id="outlined-password-input" required className="inputBox "/>
+        <br/><br/>
+        <Button type="submit" className="login-btn"
+            variant="contained"
+            color="success">Sign up</Button>
       </form>
       {err && <p>{err}</p>}
+      </div>
     </div>
   );
 }

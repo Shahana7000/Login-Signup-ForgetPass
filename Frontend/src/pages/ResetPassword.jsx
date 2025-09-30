@@ -44,6 +44,8 @@
 import React, { useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 const ResetPassword = () => {
   const [searchParams] = useSearchParams();
@@ -80,20 +82,27 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2>Reset Password</h2>
+    <div className="main-container">
+      <div className="login-card">
+      <h2 className="heading">Reset Password</h2>
       <form onSubmit={handleSubmit}>
-        <input
+        <TextField
+          id="outlined-required"
           type="password"
           placeholder="Enter new password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          className="inputBox"
         />
-        <button type="submit" disabled={loading}>
+        <br/><br/>
+        <Button type="submit" disabled={loading} className="login-btn"
+            variant="contained"
+            color="success">
           {loading ? "Resetting..." : "Reset Password"}
-        </button>
+        </Button>
       </form>
+      </div>
     </div>
   );
 };
