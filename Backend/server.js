@@ -1,14 +1,19 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
+import cors from "cors";
+
 
 dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5173", "https://your-frontend-domain.vercel.app"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
