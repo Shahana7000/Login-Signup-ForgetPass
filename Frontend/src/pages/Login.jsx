@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import '../App.css';
+import LockIcon from '@mui/icons-material/Lock';
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -27,7 +28,10 @@ export default function Login() {
   return (
     <div className="main-container">
       <div className="login-card">
-        <h2 className="heading">Login</h2>
+        <div>
+        <h2 className="heading"><LockIcon/></h2>  
+      
+        </div>
         <form onSubmit={handleSubmit}>
           <TextField
             className="inputBox"
