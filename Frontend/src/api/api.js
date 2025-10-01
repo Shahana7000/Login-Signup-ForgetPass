@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://backend.onrender.com",
+  baseURL: "//login-signup-forgetpass-4.onrender.com",
 });
 
 // attach token automatically
